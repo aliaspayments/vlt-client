@@ -1,0 +1,38 @@
+{
+  "name": "vlt-ts",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "vlt-client.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/tests/preprocessor.js"
+    },
+    "testMatch": [
+      "**/tests/**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "jest": "^21.2.1",
+    "nock": "^9.0.25",
+    "prettier": "^1.7.4",
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
