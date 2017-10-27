@@ -1,5 +1,7 @@
 # vlt-client
 
+[![Build Status](https://travis-ci.com/aliaspayments/vlt-client.svg?token=kLayivNQVqi3WiCnBo9X&branch=master)](https://travis-ci.com/aliaspayments/vlt-client)
+
 ## Usage
 
 ```typescript
