@@ -15,7 +15,8 @@ afterAll(() => {
 describe('VltClient', () => {
   const client = new VltClient({
     apiKey: 'abc123',
-    apiSecret: 'abc1234'
+    apiSecret: 'abc1234',
+    apiUrl: 'http://localhost:3000'
   });
 
   describe('.gateway', () => {

@@ -101,7 +101,7 @@ export class TransactionResource extends BaseResource {
 export interface VltClientOptions {
   apiKey: string;
   apiSecret: string;
-  apiUrl?: string;
+  apiUrl: string;
 }
 
 export default class VltClient {
@@ -111,15 +111,12 @@ export default class VltClient {
 
   private apiKey: string;
   private apiSecret: string;
-  private apiUrl: string = 'http://localhost:3000';
+  private apiUrl: string;
 
   constructor(options: VltClientOptions) {
     this.apiKey = options.apiKey;
     this.apiSecret = options.apiSecret;
-
-    if (options.apiUrl) {
-      this.apiUrl = options.apiUrl;
-    }
+    this.apiUrl = options.apiUrl;
 
     this.gateway = new GatewayResource({
       apiKey: this.apiKey,
