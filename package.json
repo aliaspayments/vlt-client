@@ -2,11 +2,14 @@
   "name": "vlt-ts",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "types": "vlt-client.d.ts",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+    "prettier": "prettier --parser typescript --single-quote --write \"{src,tests}/**/*.ts\"",
+    "lint": "tslint --project tsconfig.json \"{src,tests}/**/*.ts\"",
+    "cleanup": "rm -rf dist"
   },
   "jest": {
     "moduleFileExtensions": [
