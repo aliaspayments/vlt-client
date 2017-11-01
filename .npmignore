@@ -1,0 +1,9 @@
+src/
+tests/
+node_modules/
+.vscode/
+.travis.yml
+tsconfig.build.json
+tsconfig.json
+tslint.json
+*.log
