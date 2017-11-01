@@ -38,8 +38,8 @@ export class GatewayResource extends BaseResource {
     return this.request.patch(url, data);
   }
 
-  public redact(gatewayId: string) {
-    return this.request.put(`${this.basePath}/${gatewayId}`);
+  public redact(resourceId: string) {
+    return this.request.put(`${this.basePath}/${resourceId}/redact`);
   }
 }
 
@@ -65,8 +65,8 @@ export class PaymentMethodResource extends BaseResource {
     return this.request.patch(url, data);
   }
 
-  public redact(gatewayId: string) {
-    return this.request.put(`${this.basePath}/${gatewayId}`);
+  public redact(resourceId: string) {
+    return this.request.put(`${this.basePath}/${resourceId}/redact`);
   }
 }
 
@@ -87,13 +87,13 @@ export class TransactionResource extends BaseResource {
     return this.request.post(url, { body: data });
   }
 
-  public refund(transactionId: string, data: any) {
-    const url = `${this.basePath}/${transactionId}/refund`;
+  public refund(resourceId: string, data: any) {
+    const url = `${this.basePath}/${resourceId}/refund`;
     return this.request.post(url, { body: data });
   }
 
-  public void(transactionId: string, data: any) {
-    const url = `${this.basePath}/${transactionId}/void`;
+  public void(resourceId: string, data: any) {
+    const url = `${this.basePath}/${resourceId}/void`;
     return this.request.post(url, { body: data });
   }
 }
