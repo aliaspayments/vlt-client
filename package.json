@@ -1,6 +1,6 @@
 {
   "name": "@aliaspayments/vlt-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client library for the Vlt API",
   "repository": "aliaspayments/vlt-client",
   "main": "dist/index.js",
@@ -9,18 +9,23 @@
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.build.json",
-    "prettier":
-      "prettier --parser typescript --single-quote --write \"{src,tests}/**/*.ts\"",
+    "prettier": "prettier --parser typescript --single-quote --write \"{src,tests}/**/*.ts\"",
     "lint": "tslint --project tsconfig.json \"{src,tests}/**/*.ts\"",
     "cleanup": "rm -rf dist",
     "prepublish": "npm run cleanup && npm run build"
   },
   "jest": {
-    "moduleFileExtensions": ["ts", "js", "json"],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/tests/preprocessor.js"
     },
-    "testMatch": ["**/tests/**/*.test.(ts|js)"],
+    "testMatch": [
+      "**/tests/**/*.test.(ts|js)"
+    ],
     "testEnvironment": "node"
   },
   "devDependencies": {
