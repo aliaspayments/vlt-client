@@ -1,6 +1,6 @@
 {
   "name": "@aliaspayments/vlt-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client library for the Vlt API",
   "repository": "aliaspayments/vlt-client",
   "main": "dist/index.js",
@@ -29,16 +29,16 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.5",
-    "jest": "^21.2.1",
-    "nock": "^9.0.25",
-    "prettier": "^1.7.4",
-    "tslint": "^5.8.0",
-    "tslint-config-prettier": "^1.6.0",
-    "typescript": "^2.5.3"
+    "@types/jest": "^23.3.5",
+    "jest": "^23.6.0",
+    "nock": "^10.0.1",
+    "prettier": "^1.14.3",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
-    "request": "^2.83.0",
+    "request": "^2.88.0",
     "request-promise-native": "^1.0.5"
   }
 }

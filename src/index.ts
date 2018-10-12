@@ -35,7 +35,7 @@ export class GatewayResource extends BaseResource {
 
   public update(resourceId: string, data: any) {
     const url = `${this.basePath}/${resourceId}`;
-    return this.request.patch(url, data);
+    return this.request.patch(url, { body: data });
   }
 
   public redact(resourceId: string) {
@@ -62,7 +62,7 @@ export class PaymentMethodResource extends BaseResource {
 
   public update(resourceId: string, data: any) {
     const url = `${this.basePath}/${resourceId}`;
-    return this.request.patch(url, data);
+    return this.request.patch(url, { body: data });
   }
 
   public redact(resourceId: string) {
