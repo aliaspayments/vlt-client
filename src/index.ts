@@ -87,6 +87,16 @@ export class TransactionResource extends BaseResource {
     return this.request.post(url, { body: data });
   }
 
+  public authorize(data: any) {
+    const url = `${this.basePath}/authorize`;
+    return this.request.post(url, { body: data });
+  }
+
+  public capture(resourceId: string, data: any) {
+    const url = `${this.basePath}/${resourceId}/capture`;
+    return this.request.post(url, { body: data });
+  }
+
   public refund(resourceId: string, data: any) {
     const url = `${this.basePath}/${resourceId}/refund`;
     return this.request.post(url, { body: data });

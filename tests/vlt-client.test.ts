@@ -102,6 +102,18 @@ describe('VltClient', () => {
       });
     });
 
+    describe('.authorize', () => {
+      it('should be defined', () => {
+        expect(client.transaction.authorize).toBeDefined();
+      });
+    });
+
+    describe('.capture', () => {
+      it('should be defined', () => {
+        expect(client.transaction.capture).toBeDefined();
+      });
+    });
+
     describe('.refund', () => {
       it('should be defined', () => {
         expect(client.transaction.refund).toBeDefined();
