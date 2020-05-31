@@ -12,7 +12,8 @@
     "prettier": "prettier --parser typescript --single-quote --write \"{src,tests}/**/*.ts\"",
     "lint": "tslint --project tsconfig.json \"{src,tests}/**/*.ts\"",
     "cleanup": "rm -rf dist",
-    "prepublish": "npm run cleanup && npm run build"
+    "prepublish": "yarn run snyk-protect && npm run cleanup && npm run build",
+    "snyk-protect": "snyk protect"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -39,6 +40,8 @@
   },
   "dependencies": {
     "request": "^2.88.2",
-    "request-promise-native": "^1.0.8"
-  }
+    "request-promise-native": "^1.0.8",
+    "snyk": "^1.317.0"
+  },
+  "snyk": true
 }
